@@ -32,7 +32,7 @@ function Dropdown({
       <button ref={dropdown_toggle_el} className="dropdown__toggle">
         {icon ? <i className={icon}></i> : ""}
         {badge ? <span className="dropdown__toggle-badge">{badge}</span> : ""}
-        {customToggle ? customToggle : ""}
+        {customToggle ? customToggle() : ""}
       </button>
       <div ref={dropdown_content_el} className="dropdown__content">
         {contentData && renderItems
